@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 30px 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 90px;
+}
+nav ul li{
+    float: left;
+    margin-right: 30px;
+}
+nav ul li a{
+    /* background-color: #ff0000; */
+    padding: 5px 10px;
+    /* border-bottom: 5px solid #00000000; */
+    /* transition: 2s; */
+    position: relative;
+}
+/* nav ul li a:hover{
+    background-color: #ffdf10;
+    border-bottom: 5px solid #000000;
+    
+} */
+nav ul li a::before{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 2s;
+}
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 2s;
+}
+nav ul li a:hover:before{
+    width:100%;
+   
+}
+nav ul li a:hover:after{
+    width:100%;
+   
+}
+
+
+
+
+.shota{
+    clear: left;
+    width: 600px;
+    height: 300px;
+    background-color: #ff0000;
+    margin: 50px auto;
+    border-radius: 0 50% 50% 0;
+    box-shadow: 50px 10px 50px #1100ab inset;
+}
+ul.pseudo{
+    width: 300px;
+}
+/* 5th 1th 2th */
+ul.pseudo li:first-child{
+    background-color: #ff0000;
+}
+ul.pseudo li:last-child{
+    background-color: #ffdf10;
+}
+/* even -ლუწი    odd -კენტი */
+ul.pseudo li:nth-child(odd){
+    font-size: 40px;
+}
+table{
+    margin: 20px auto;
+}
+table, tr, td{
+    border: 2px solid #000000;
+    border-collapse: collapse;
+}
+tr, td{
+    width: 100px;
+    height: 100px;
+}
+table tr:nth-child(odd) td:nth-child(even),
+table tr:nth-child(even) td:nth-child(odd)
+{
+    background-color: #000000;
+}
+.text::first-letter{
+    font-size: 30px;
+}
+.text::first-line{
+    background-color: #ffdf10;
+}
+.text::before{
+    content: "<<";
+}
+.text::after{
+    content: url(../img/smile.png);
+}
